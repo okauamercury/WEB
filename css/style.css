@@ -5,12 +5,12 @@
 /* cabeçalho */
 
 header{
-    background-color: black; 
-    color: white;
+    background-color: black;
+    color: blue;
     padding: 1rem 0;
     margin: 35px 0 0 0;
-    text-align: center; 
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);   
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 h1{
@@ -24,6 +24,7 @@ h1{
     margin: 1rem 0 0 0;
     justify-content: center;
     display: flex;
+    font-size: 20px;
 }
 
 nav ul li{
@@ -44,13 +45,125 @@ li{
     margin-right: 10px
 }
 
-#minha-foto{
-   width: 200px;
-   height: auto;   
+nav ul li a:hover{
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+    transition: color 0.3s ease;
 }
 
+/*  conteudo principal */
 
+main{
+    max-width: 960px; /* largura maxima para o conteudo principal */
+    margin: 2rem auto; /* centraliza o conteudo e adiciona margem superior e inferior */ /*também serve para calcular o tamanho da tela de forma externa*/
+    padding: 0 20px; /* preechimento lateral para não colar nas bordas */
+}
 
+/*  estilos para as seções ( sobre mim, projeto e cursos) */
 
+section{
+    background-color: white; /* fundo branco para as seções*/
+    padding: 2.5rem; /* 2.5rem = 40px - preechimento interno */
+    margin-bottom: 2.5rem; /* ou 40 px. espaço entre as seções*/
+    border-radius: 8px; /* canto arredondado */
+    box-shadow: 0 6px 10px rgba(0,0,0,0.1); /* sombra suave para as seções*/
+}
 
+section h2{
+    color:black; /* cor do titulo*/
+    text-align: center;
+    margin-bottom: 1.5rem; /* espaço abaixo do titulo da seção */
+    font-size: 2rem; /* tamanho da fonte do titulo da seção */
+}
 
+section h3{
+    font-size: 2rem;
+}
+/* seção sobre mim */
+
+#Sobre figure{
+    text-align: center;
+    margin-bottom: 2rem; /* espaço abaixo da figura*/
+    border-radius: 50%;
+}
+
+#Sobre img{
+    border-radius: 20%; /* transforma a imagem em um circulo*/
+    border: 3px solid black;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 2); /* sombra para a imagem */
+    transition: transform 0.3s ease; /* transição suave para o efeito hover*/
+}
+
+#Sobre img:hover {
+    transform: scale(1.05); /* aumenta em 5% (um pouco) a imagem ao passar o mouse sobre ela */
+}
+
+#Sobre figcaption{
+    margin-top: 10px; /* entre a imagem e a legenda */
+    font-style: italic; /* o texto em italico */
+    color: #555; /* cor do texto da legenda */
+}
+
+             /* seção meus projetos */
+
+.projeto-item{ /* estilos para artigos de projeto*/
+    border-bottom: 1px solid black; /* linha divisoria entre os projetos*/
+    padding-bottom: 1.5rem; /* espaçamento abaixo da linha*/
+    margin-bottom: 1.5rem; /* espaçamento abaixo do artigo*/
+}
+
+.projeto-item:last-child{
+    border-bottom: none; /* remove a linha do ultimo artigo (none = nenhum)*/
+}
+
+#projetos h3{
+    color: #3498db;
+    font-size: 1.5rem; /* tamanho do titulo do projeto*/ 
+    margin-bottom: 0.8rem; /* espaço abaixo do titulo*/
+}
+ 
+/* estilo para os links "Ver projeto"*/
+
+.botao-projeto{
+    display: inline-block; /* permite aplicar padding e margin */
+    background-color: yellowgreen; /* cor de fundo do botão " ver projetos" */
+    color: white; /* cor do botao "ver projetos" */
+    padding: 8px 15px; /* preenchimento interno */ 
+    border-radius: 5px; /* canto arredondado do botao*/
+    text-decoration: none; /* remover sublinhado */
+    margin-top: 1rem; /* espaço superior */
+    transition: background-color 0.3s ease; /* transição suave para o hover do botão */
+}
+
+.botao-projeto:hover{
+    background-color: #212121; /* troca suave de cor ao passar o mouse por cima */
+}
+
+/*Seção de Cursos & Certificados */
+
+.lista-cursos{
+    display: grid; /* torna a div um formatode grade */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* layout responsivo em grande */
+    gap: 20px; /* Espaçamento sobre os itens da grade*/
+}
+
+.curso-item{
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.curso-item h3{
+    color: #28a745;
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+
+.curso-item time{
+    display: block; /* Garante que a data fique em sua linha */
+    font-size: 0.9rem;
+
+}
