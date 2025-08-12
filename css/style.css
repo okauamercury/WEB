@@ -17,18 +17,60 @@ body{
     font-family: 'Roboto', 'sans-serif' ; /* Aplica a fonte Roboto*/
     line-height: 1.6; /* Espaçamento entre as linhas para melhor leitura */
     font-weight: 300; /*Fonte regular*/ /* fonte entre 200 e 400 é boa pratica */
+    background-image: url(../images/foto-tecnologia.webp);
+    background-repeat: no-repeat;       /* Impede repetição */
+    background-size: cover;             /* Preenche a tela */
+    background-attachment: fixed;       /* Mantém fixa ao rolar */
+    background-position: center;        /* Centraliza a imagem */
+    margin: 0;
+    max-width: auto;
 }
- /* Container para centralizar o conteúdo principal */
 
+ /* Container para centralizar o conteúdo principal */
 .container{
   max-width: 1200px; /* Largura maxima para o conteudo */ /*caso você prefira, so mudar o max-width para melhorar a tela*/
   margin: 0 auto;
-  background-color: rgb(233, 229, 229);
+  background-color: rgb(235, 233, 233);
   padding: 0 20px;
 }
 
 
 /* cabeçalho */
+img{
+    width: 50px;
+    border-radius: 20px;
+    align-items: end;
+}
+
+ /* Estilo do botão */
+ .menu-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    
+}
+.menu {
+    display: none;
+    margin-top: 10px;
+    background-color: #ecf0f1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu a {
+    display: block;
+    padding: 5px 0;
+    color: #2c3e50;
+    text-decoration: none;
+}
+.menu a:hover {
+    text-decoration: underline;
+}
+
 
 header{
     background-color: black;
@@ -47,7 +89,7 @@ h1{
    padding: 0 20px;
 }
 
- nav ul{
+nav ul{
     list-style: none;
     margin: 1rem 0 0 0;
     justify-content: center;
@@ -122,9 +164,19 @@ section h3{
     box-shadow: 0 0 15px rgba(0, 0, 0, 2); /* sombra para a imagem */
     transition: transform 0.3s ease; /* transição suave para o efeito hover*/
 }
+#minha-foto{
+    width: 300px;
+    border-radius: 150px;
+    display: flex;
+    margin-bottom: 2rem;
+    border: 3px solid black;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 2); /* sombra para a imagem */
+    justify-content: center;
+    align-items: center;
+}
 
 #Sobre img:hover {
-    transform: scale(1.05); /* aumenta em 5% (um pouco) a imagem ao passar o mouse sobre ela */
+    transform: scale(1.05); /*aumenta em 5% (um pouco) a imagem ao passar o mouse sobre ela*/
 }
 
 #Sobre figcaption{
@@ -139,10 +191,12 @@ section h3{
     border-bottom: 1px solid black; /* linha divisoria entre os projetos*/
     padding-bottom: 1.5rem; /* espaçamento abaixo da linha*/
     margin-bottom: 1.5rem; /* espaçamento abaixo do artigo*/
+    flex-direction: row;
 }
 
 .projeto-item:last-child{
     border-bottom: none; /* remove a linha do ultimo artigo (none = nenhum)*/
+    flex-direction: row;
 }
 
 #projetos h3{
@@ -261,5 +315,38 @@ footer .mapa-container iframe{
     font-size: 0.85rem;
     text-align: center;
     width: 100%;
+}
 
+/* responsividade basica - com midia queries */
+
+@media (max-width:768px){
+    h1{
+        font-size: 2rem;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    nav ul li{
+        margin:10px 0 0 0;
+    }
+    main{
+        padding: 0 15px;
+    }
+    section{
+        padding: 1.5rem;
+    }
+    section h2{
+        font-size: 1.8rem;
+    }
+    footer .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .localizacao,
+    footer .mapa-container
+    {
+        flex-basis: 90%;
+        max-width: 90%;
+        text-align: center;
+    }
 }

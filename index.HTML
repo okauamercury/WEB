@@ -6,8 +6,10 @@
     <meta name="viewport" content="width= device-width, initial-scale=1.0">
      <meta name="desc" contant="Ecommerce">
      <meta name="keywords" contant="Peças, componentes, Placas"> 
-     <title>Principal</title> 
+     <title>Portifolio Kauã</title> 
      <link rel="stylesheet" href="./css/style.css">
+     <link rel="icon" href="./images/groot.webp" type="nemo">
+
 
      <!-- css interno (tag <style>) -->
         <!--estilização-->
@@ -15,24 +17,38 @@
       <!-- script -->
 </head>
     <!-- corpo -->
-<body style="background-color: white;">
+<body style="background-color: rgb(129, 125, 125);">
     <!-- Aqui começa a div -->
-   <div class="container">
-    <!-- tag semantica -->
+   <div class="container">    <!-- tag semantica -->
      <!-- cabeçalho do conteudo -->
       <header>
+        <!-- <button class="menu-btn" onclick="toggleMenu()">☰ Menu</button> /* Caso queira usar alguma dia, um scrpit para botão menu*/
+
+        <div class="menu" id="menu">
+          <a href="#home">Sobre Mim</a>
+          <a href="#projeto">Projetos</a>
+          <a href="#cursos">Cursos</a>
+          <a href="#contato">Contato</a>
+        </div>
+      
+        <script>
+            function toggleMenu() {
+              const menu = document.getElementById('menu');
+              menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+            }
+        </script> -->
         <!-- css inline - exemplo da linha abaixo -->
                 <h1>Portifolio do Kauã</h1>
                 <nav">
                     <ul>
                         <li>
-                            <a href="#sobre">Sobre Mim</a>
+                            <a href="#Sobre">Sobre Mim</a>
                         </li>
                         <li>
-                            <a href="#projetos">Projetos</a>
+                            <a href="#Projeto">Projeto</a>
                         </li>
                         <li>
-                            <a href="#cursos">Cursos</a>
+                            <a href="#Cursos">Cursos</a>
                         </li>
                         <li>
                             <a href="#Contato">Contato</a>
@@ -46,10 +62,11 @@
             <h2>Sobre Mim</h2>
             <figure>
                 <img src="./images/kaua.jpg" alt="foto de perfil" id="minha-foto">
-                <figcaption>Olá, me chamo Kauã </figcaption>
+                <figcaption>Desenvolvedor FullStack </figcaption>
             </figure>
             <p>Apaixonado por tecnologia, tenho conhecimentos em SQL, C# e atualmente aprimoro os conhecimentos em criação de sites para a WEB. 
                 Atualmente buscando conhecer novas ferramentas e tecnologias, pensando em melhor minha capacidade tecníca para estar pronto para os desafios que o futuro me reserva.
+                Desenvolvendo diversas aplicações para melhor atender as pessoas e as necessidades da sociedade.
             </p>
         </section>
         <section id= "Projeto">
